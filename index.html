@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="titulo">Registro</div>
+        <form action="#">
+            <div class="dados-usuario">
+                <div class="dados-box">
+                    <span class="dados-usuario">Nome completo</span>
+                    <input type="text" placeholder="Digite seu nome" required>
+                </div>
+                <div class="dados-box">
+                    <span class="dados-usuario">Login</span>
+                    <input type="text" placeholder="Digite seu login" required>
+                </div>
+                <div class="dados-box">
+                    <span class="dados-usuario">Email</span>
+                    <input type="email" placeholder="Digite seu email" required>
+                </div>
+                <div class="dados-box">
+                    <span class="dados-usuario">Número de celular</span>
+                    <input type="tel" placeholder="Digite seu número de celular" required>
+                </div>
+                <div class="dados-box">
+                    <span class="dados-usuario">Senha</span>
+                    <input type="password" placeholder="Digite sua senha" required>
+                </div>
+                <div class="dados-box">
+                    <span class="dados-usuario">Confirme a senha</span>
+                    <input type="password" placeholder="Confirme a sua senha" required>
+                </div>
+            </div>
+            <div class="genero-usuario">
+                <input type="radio" name="genero" id="dot-1">
+                <input type="radio" name="genero" id="dot-2">
+                <input type="radio" name="genero" id="dot-3">
+                <span class="genero-titulo">Genero</span>
+                <div class="categoria">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="genero">Masculino</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="genero">Feminino</span>
+                    </label>
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="genero">Prefiro não informar</span>
+                    </label>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Registrar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

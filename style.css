@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #90b5d0, #9bdeca);
+}
+
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container .titulo{
+    font-size: 25px;
+    font-weight: 600;
+    position: relative;
+}
+
+.container .titulo::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #425f74, #9bdeca);
+}
+
+.container form .dados-usuario{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .dados-usuario .dados-box{
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 15px;
+}
+
+.dados-usuario .dados-box .dados-usuario{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.dados-usuario .dados-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid #9bdeca;
+    padding-left: 15px;
+    font-size: 12px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.dados-usuario .dados-box input:focus,
+.dados-usuario .dados-box input:valid{
+    border-color: #425f74;
+}
+
+form .genero-usuario .genero-titulo{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+form .genero-usuario .categoria{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.genero-usuario .categoria label{
+    display: flex;
+    align-items: center;
+}
+
+.genero-usuario .categoria .dot{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background: #d9d9d9;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .categoria label .one,
+#dot-2:checked ~ .categoria label .two,
+#dot-3:checked ~ .categoria label .three{
+     border-color: #d9d9d9;
+     background: #425f74;
+ }
+
+form input[type="radio"]{
+     display: none;
+ }
+
+form .button{
+     height: 45px;
+     margin: 45px 0;
+ }
+
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #425f74, #9bdeca);
+    border-radius: 5px;
+    border: none;
+}
+
+form .button input:hover{
+    background: linear-gradient(-135deg, #425f74, #9bdeca);
+}
+
+@media (max-width: 584px){
+    .container{
+        max-width: 100%;
+    }
+
+    form .dados-usuario .dados-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    form .genero-usuario .categoria{
+        width: 100%;
+    }
+
+    .container form .dados-usuario{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .dados-usuario::-webkit-scrollbar{
+        width: 0;
+    }
+
+}
